@@ -27,7 +27,7 @@ let package = Package(
         ),
         .package(
             url: "https://github.com/jedisct1/swift-sodium", 
-            from: "0.8.0"
+            .branch("master")
         ),
     ],
     targets: [
