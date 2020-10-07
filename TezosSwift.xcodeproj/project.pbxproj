@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,10 @@
 		295F97D9A7BD6BEE565A73D2 /* IntListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = F868266121CD1295003C7D4D /* IntListContract.swift */; };
 		4E1E35094109ACD43689EC21 /* UnitPairContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B53222C1C6E6F871E4B226 /* UnitPairContract.swift */; };
 		7340C8F8C5AA2E984AAEDEBC /* PairContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE7FF72DE50B5787FB84FE8 /* PairContract.swift */; };
+		8530466B252D899D0045DC7E /* Sodium in Frameworks */ = {isa = PBXBuildFile; productRef = 8530466A252D899D0045DC7E /* Sodium */; };
+		8530466D252D899D0045DC7E /* BigInt in Frameworks */ = {isa = PBXBuildFile; productRef = 8530466C252D899D0045DC7E /* BigInt */; };
+		85304688252D92600045DC7E /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 85304687252D92600045DC7E /* CryptoSwift */; };
+		8530468A252D92600045DC7E /* MnemonicKit in Frameworks */ = {isa = PBXBuildFile; productRef = 85304689252D92600045DC7E /* MnemonicKit */; };
 		8F4384A5221C2CC60003BD0B /* CompletableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4384A4221C2CC60003BD0B /* CompletableTests.swift */; };
 		8FAB19B1221D736300DD3F9B /* ExecutionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAB19B0221D736300DD3F9B /* ExecutionTests.swift */; };
 		A3FEA3257A0B23D31BE0F83E /* StringOptionalContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE3373EE33D47028A21C074 /* StringOptionalContract.swift */; };
@@ -78,11 +82,7 @@
 		F84A549F2388207C005D0367 /* ContractPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84A549423881FF7005D0367 /* ContractPublisher.swift */; };
 		F84A54A02388207C005D0367 /* TezosClient+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84A549623881FF7005D0367 /* TezosClient+Combine.swift */; };
 		F84A54A12388207C005D0367 /* ContractSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84A549723881FF7005D0367 /* ContractSubscription.swift */; };
-		F84A54A323882883005D0367 /* BigInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C53221CD25F1005684A3 /* BigInt.framework */; };
-		F84A54A823882886005D0367 /* MnemonicKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C57521CD4F93005684A3 /* MnemonicKit.framework */; };
-		F84A54AE2388288A005D0367 /* Sodium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C53321CD25F1005684A3 /* Sodium.framework */; };
 		F84A54C7238829CB005D0367 /* TezosSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F86826A721CD1450003C7D4D /* TezosSwift.framework */; };
-		F84A54CC23882A3D005D0367 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A8C57421CD4F93005684A3 /* CryptoSwift.framework */; };
 		F85F0CBD21B13A000074E391 /* TezosBalanceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABC857F2182A072006DE8FD /* TezosBalanceTest.swift */; };
 		F85F0CBE21B13A000074E391 /* AbstractOperationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABC85832182AE86006DE8FD /* AbstractOperationTest.swift */; };
 		F85F0CBF21B13A000074E391 /* WalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABC857D21826C71006DE8FD /* WalletTests.swift */; };
@@ -395,10 +395,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F84A54CC23882A3D005D0367 /* CryptoSwift.framework in Frameworks */,
-				F84A54A823882886005D0367 /* MnemonicKit.framework in Frameworks */,
-				F84A54AE2388288A005D0367 /* Sodium.framework in Frameworks */,
-				F84A54A323882883005D0367 /* BigInt.framework in Frameworks */,
+				8530466B252D899D0045DC7E /* Sodium in Frameworks */,
+				8530468A252D92600045DC7E /* MnemonicKit in Frameworks */,
+				8530466D252D899D0045DC7E /* BigInt in Frameworks */,
+				85304688252D92600045DC7E /* CryptoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,6 +737,8 @@
 				F84A540C2387D8A3005D0367 /* PBXTargetDependency */,
 			);
 			name = TezosSwift_Example;
+			packageProductDependencies = (
+			);
 			productName = TezosKit;
 			productReference = 7AA8F3562160158000C05895 /* TezosSwift_Example.app */;
 			productType = "com.apple.product-type.application";
@@ -823,13 +825,18 @@
 				F86826A321CD1450003C7D4D /* Sources */,
 				F86826A421CD1450003C7D4D /* Frameworks */,
 				F86826A521CD1450003C7D4D /* Resources */,
-				F84A54CD23882AF1005D0367 /* Carthage */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = TezosSwift;
+			packageProductDependencies = (
+				8530466A252D899D0045DC7E /* Sodium */,
+				8530466C252D899D0045DC7E /* BigInt */,
+				85304687252D92600045DC7E /* CryptoSwift */,
+				85304689252D92600045DC7E /* MnemonicKit */,
+			);
 			productName = TezosSwift;
 			productReference = F86826A721CD1450003C7D4D /* TezosSwift.framework */;
 			productType = "com.apple.product-type.framework";
@@ -878,6 +885,12 @@
 				Base,
 			);
 			mainGroup = 7AA8F34D2160158000C05895;
+			packageReferences = (
+				85304658252D88A10045DC7E /* XCRemoteSwiftPackageReference "swift-sodium" */,
+				85304662252D896C0045DC7E /* XCRemoteSwiftPackageReference "BigInt" */,
+				8530466E252D8AFE0045DC7E /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+				8530467A252D923C0045DC7E /* XCRemoteSwiftPackageReference "MnemonicKit" */,
+			);
 			productRefGroup = 7AA8F3572160158000C05895 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -960,35 +973,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		F84A54CD23882AF1005D0367 /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/BigInt.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/CryptoSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/MnemonicKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Sodium.framework",
-			);
-			name = Carthage;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BigInt.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Sodium.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/CryptoSwift.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/MnemonicKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7AA8F3522160158000C05895 /* Sources */ = {
@@ -1670,6 +1654,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		85304658252D88A10045DC7E /* XCRemoteSwiftPackageReference "swift-sodium" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jedisct1/swift-sodium";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+		85304662252D896C0045DC7E /* XCRemoteSwiftPackageReference "BigInt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/attaswift/BigInt";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.0;
+			};
+		};
+		8530466E252D8AFE0045DC7E /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.2;
+			};
+		};
+		8530467A252D923C0045DC7E /* XCRemoteSwiftPackageReference "MnemonicKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/newbdez33/MnemonicKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.19;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8530466A252D899D0045DC7E /* Sodium */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85304658252D88A10045DC7E /* XCRemoteSwiftPackageReference "swift-sodium" */;
+			productName = Sodium;
+		};
+		8530466C252D899D0045DC7E /* BigInt */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85304662252D896C0045DC7E /* XCRemoteSwiftPackageReference "BigInt" */;
+			productName = BigInt;
+		};
+		85304687252D92600045DC7E /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8530466E252D8AFE0045DC7E /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
+		85304689252D92600045DC7E /* MnemonicKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8530467A252D923C0045DC7E /* XCRemoteSwiftPackageReference "MnemonicKit" */;
+			productName = MnemonicKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7AA8F34E2160158000C05895 /* Project object */;
 }
