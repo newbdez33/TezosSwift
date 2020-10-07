@@ -33,7 +33,7 @@ let package = Package(
     targets: [
         .target(
             name: "TezosSwift",
-            dependencies: ["CryptoSwift", "BigInt", "MnemonicKit", "Sodium"],
+            dependencies: ["CryptoSwift", "BigInt", "MnemonicKit", "swift-sodium"],
             path: "TezosSwift",
             exclude: ["Info.plist"]),
     ]
