@@ -37,10 +37,10 @@ let package = Package(
             name: "TezosSwift",
             dependencies: ["BigInt", "MnemonicKit", "Sodium"],
             path: "TezosSwift",
-            exclude: ["Info.plist", "Combine"]),
+            exclude: ["Info.plist", "Combine", "Core/Info.plist"]),
         .target(
             name: "Combine",
-            dependencies: ["BigInt", "MnemonicKit", "Sodium"],
+            dependencies: ["BigInt", "MnemonicKit", "Sodium", "TezosSwift"],
             path: "TezosSwift/Combine"),
         .testTarget(
             name: "TezosSwiftTests",
