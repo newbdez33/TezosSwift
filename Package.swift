@@ -31,8 +31,9 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "TezosSwift",
-            dependencies: ["BigInt", "MnemonicKit", "Sodium"]),
+            dependencies: ["BigInt", "MnemonicKit", "Sodium"],
             path: "TezosSwift",
+            exclude: ["Info.plist"]),
         .testTarget(
             name: "TezosSwiftTests",
             dependencies: ["TezosSwift"]),
