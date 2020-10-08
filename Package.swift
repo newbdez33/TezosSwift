@@ -21,8 +21,9 @@ let package = Package(
             from: "1.3.21"
         ),
         .package(
+            name: "Sodium",
             url: "https://github.com/jedisct1/swift-sodium", 
-            from: "0.9.0"
+            .branch("master")
         ),
     ],
     targets: [
