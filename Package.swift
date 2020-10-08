@@ -5,6 +5,10 @@ import PackageDescription
 
 let package = Package(
     name: "TezosSwift",
+    platforms: [
+        .macOS(.v10_12),
+        .iOS(.v14)//,
+    ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
@@ -32,8 +36,7 @@ let package = Package(
         .target(
             name: "TezosSwift",
             dependencies: ["BigInt", "MnemonicKit", "Sodium"],
-            path: "TezosSwift",
-            exclude: ["Info.plist"]),
+            path: "TezosSwift"),
         .testTarget(
             name: "TezosSwiftTests",
             dependencies: ["TezosSwift"]),
