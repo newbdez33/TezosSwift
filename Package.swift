@@ -32,6 +32,7 @@ let package = Package(
         .target(
             name: "TezosSwift",
             dependencies: ["BigInt", "MnemonicKit", "Sodium"]),
+            path: "TezosSwift",
         .testTarget(
             name: "TezosSwiftTests",
             dependencies: ["TezosSwift"]),
